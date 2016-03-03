@@ -156,6 +156,8 @@ hr.star-light:after {
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    width: 100%;
+    display: inline-table;
 }
 
 .navbar a:focus {
@@ -658,8 +660,16 @@ label {
     .close-modal {
         display: none;
     }
+    .navbar-nav{
+        margin-right: -63px;
+    }
 }
 
+@media (max-width: 991px) {
+    .navbar-nav{
+        margin-right: -63px;
+    }
+}
 
 /* -------------------------------------
  * mobile phones (vertical version only)
@@ -778,7 +788,7 @@ label {
 .cat {
     position: relative;
     padding-top: 85px;
-    height: 450px;
+    height: 510px;
 }
 
 .cat h2 {
