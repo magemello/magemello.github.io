@@ -682,7 +682,10 @@ label {
         border-left: none;
     }
     #timeline li {
-        margin: 70px 0;
+        margin: 95px 0;
+    }
+    .exp-alfresco{
+        width: 283px;
     }
     label {
         width: 85%;
