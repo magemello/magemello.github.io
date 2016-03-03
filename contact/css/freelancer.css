@@ -1202,11 +1202,3 @@ label {
 .contact textarea {
     color: #FFFFFF;
 }
-
-/* IFRAME*/
-
-.iframe-contact{
-    border: 0px;
-    width: 100%;
-    height: 710px;
-}
