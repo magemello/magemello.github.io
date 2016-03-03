@@ -1212,6 +1212,15 @@ label {
     color: #FFFFFF;
 }
 
+.github-link{
+    color: #3498db;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.single-button{
+    width: 200px;
+}
 /* IFRAME*/
 
 .iframe-contact{
