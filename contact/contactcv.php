@@ -49,6 +49,14 @@ if(isset($_POST['submitted'])) {
 
 		mail($emailTo, $subject, $body, $headers);
 		
+		$emailTo = 'mario.romano83@gmail.com';
+        //Autorespond
+		$respondSubject = 'Thank you for contacting Mario Romnao';
+		$respondBody = "I will answer you as soon as possible.";
+		$respondHeaders = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $emailTo;
+		
+		mail($email, $respondSubject, $respondBody, $respondHeaders);
+		
         // set our boolean completion value to TRUE
 		$emailSent = true;
 	}
