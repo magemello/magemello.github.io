@@ -51,8 +51,8 @@ if(isset($_POST['submitted'])) {
 		
 		$emailTo = 'mario.romano83@gmail.com';
         //Autorespond
-		$respondSubject = 'Thank you for contacting Mario Romnao';
-		$respondBody = "I will answer you as soon as possible.";
+		$respondSubject = 'Mario Romano - Thank you for contacting me';
+		$respondBody = "I will answer to you as soon as possible.";
 		$respondHeaders = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $emailTo;
 		
 		mail($email, $respondSubject, $respondBody, $respondHeaders);
