@@ -90,12 +90,8 @@ header {
     position: relative;
 }
 
-.page-top-link {
-    display: none;
-}
-
 header .main-page {
-    padding-top: 100px;
+    padding-top: 49px;
     padding-bottom: 50px;
 }
 
@@ -123,9 +119,6 @@ hr.star-light:after {
 }
 
 @media(min-width:768px) {
-    .page-top-link {
-        display: block;
-    }
     header .main-page {
         padding-top: 130px;
         padding-bottom: 100px;
@@ -680,10 +673,6 @@ label {
 @media (max-width: 991px) {
     .navbar-nav {
         margin-right: -63px;
-    }
-    header .main-page {
-        padding-top: 130px;
-        padding-bottom: 100px;
     }
 }
 
