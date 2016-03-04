@@ -120,7 +120,7 @@ hr.star-light:after {
 
 @media(min-width:768px) {
     header .main-page {
-        padding-top: 200px;
+        padding-top: 130px;
         padding-bottom: 100px;
     }
     header .intro-text .name {
@@ -488,7 +488,6 @@ footer .footer-below {
     margin-right: 0px;
 }
 
-
 hr.star-primary {
     border-color: #ffffff;
 }
@@ -666,16 +665,17 @@ label {
     .close-modal {
         display: none;
     }
-    .navbar-nav{
+    .navbar-nav {
         margin-right: -63px;
     }
 }
 
 @media (max-width: 991px) {
-    .navbar-nav{
+    .navbar-nav {
         margin-right: -63px;
     }
 }
+
 
 /* -------------------------------------
  * mobile phones (vertical version only)
@@ -690,7 +690,7 @@ label {
     #timeline li {
         margin: 95px 0;
     }
-    .exp-alfresco{
+    .exp-alfresco {
         width: 283px;
     }
     label {
@@ -889,12 +889,12 @@ label {
     border-width: 1em 1em 0 0;
 }
 
-.img-circle{
-  border: 2px solid #2c3e50;
+.img-circle {
+    border: 2px solid #2c3e50;
 }
 
-.img-circle:hover{
-  border: 2px solid #EEB54D;
+.img-circle:hover {
+    border: 2px solid #EEB54D;
 }
 
 .tag-shell {
@@ -911,12 +911,13 @@ label {
     background: #EEB54D;
 }
 
-.tag-shell-no-bg{
+.tag-shell-no-bg {
     overflow: hidden;
     font-weight: bolder;
     display: inline-block;
     padding: 3px 8px 3px 8px;
 }
+
 
 /* TETRIS */
 
@@ -1201,9 +1202,10 @@ label {
     color: #FFFFFF;
 }
 
-.justify{
+.justify {
     text-align: justify;
 }
+
 
 /* CONTACT */
 
@@ -1215,18 +1217,20 @@ label {
     color: #FFFFFF;
 }
 
-.github-link{
+.github-link {
     color: #3498db;
     font-size: 20px;
     font-weight: 800;
 }
 
-.single-button{
+.single-button {
     width: 200px;
 }
+
+
 /* IFRAME*/
 
-.iframe-contact{
+.iframe-contact {
     border: 0px;
     width: 100%;
     height: 710px;
