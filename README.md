@@ -3,7 +3,7 @@
 http://magemello.github.io/
 
 
-#What I have used to make it
+#What I used to make it
 
 - http://startbootstrap.com/template-overviews/freelancer/
 - https://github.com/Aerolab/blockrain.js
