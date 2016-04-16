@@ -158,6 +158,8 @@ hr.star-light:after {
     font-weight: 700;
     width: 100%;
     display: inline-table;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 .navbar a:focus {
@@ -1129,16 +1131,18 @@ label {
 .devicon-text {
     color: #FFFFFF;
     margin: auto auto;
-    font-size: 2em;
+    font-size: 1.8em;
     position: relative;
     text-align: center;
     margin-top: 3px;
+    font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 .devicon-text-small {
     color: #FFFFFF;
     margin: auto auto;
-    font-size: 2em;
+    font-size: 1.8em;
+    font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !important;
     position: relative;
     text-align: center;
     margin-top: 2px;
