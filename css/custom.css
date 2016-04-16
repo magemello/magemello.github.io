@@ -1,3 +1,15 @@
+.top-left-blog{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+.top-left-blog a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .btn-social {
     display: inline-block;
     width: 50px;
