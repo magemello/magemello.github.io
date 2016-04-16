@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="css/nyan.css" />
     <link rel="stylesheet" href="src/blockrain.css">
     <link rel="stylesheet" href="css/devicon.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -79,6 +81,10 @@
                     <li class="page-scroll">
                         <a href="#break" data-toggle="modal">Take a break</a>
                     </li>
+
+                    <li class="page-scroll">
+                        <a href="blog.html#open">Blog</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -86,7 +92,7 @@
         <!-- /.container-fluid -->
     </nav>
     <!-- Header -->
-    <header>
+    <header id="my-info">
         <div class="main-page">
             <div class="row profile-container">
                 <div class="">
@@ -130,7 +136,7 @@
                     <input class='radio' id='work5' name='works' type='radio' checked>
                     <div class="relative">
                         <label for='work5'><img src="img/logos/alfresco_logo.png" width="100px"></label>
-                        <span class='date'>May 2015 to Cuurent Job | London</span>
+                        <span class='date'><i class="fa fa-calendar"></i> 2015 to Cuurent Job London</span>
                         <img class="circle" src="img/london.png">
                     </div>
                     <div class='content'>
@@ -143,7 +149,7 @@
                     <input class='radio' id='work4' name='works' type='radio'>
                     <div class="relative">
                         <label for='work4'><img class="work-logo" src="img/logos/ws_logo.png" width="100px"></label>
-                        <span class='date'>August 2013 to May 2015 | London</span>
+                        <span class='date'><i class="fa fa-calendar"></i> 2013 to 2015 London</span>
                         <img class="circle" src="img/london.png">
                     </div>
                     <div class='content-no-flag'>
@@ -156,7 +162,7 @@
                     <input class='radio' id='work3' name='works' type='radio'>
                     <div class="relative">
                         <label for='work3'><img class="work-logo" src="img/logos/ithr_logo.png" width="100px"></label>
-                        <span class='date'>September 2012 to August 2013 | London</span>
+                        <span class='date'><i class="fa fa-calendar"></i> 2012 to 2013 London</span>
                         <img class="circle" src="img/london.png">
                     </div>
                     <div class='content-no-flag'>
@@ -169,7 +175,7 @@
                     <input class='radio' id='work2' name='works' type='radio'>
                     <div class="relative">
                         <label for='work2'><img class="work-logo" src="img/logos/accenture-logo.png" width="100px"> </label>
-                        <span class='date'>January 2008 to August 2012  | Naples, Rome, Milan</span>
+                        <span class='date'><i class="fa fa-calendar"></i> 2008 to 2012 Naples, Rome, Milan</span>
                         <img class="circle" src="img/rome.png">
                     </div>
                     <div class='content-no-flag'>
@@ -182,7 +188,7 @@
                     <input class='radio' id='work1' name='works' type='radio'>
                     <div class="relative">
                         <label for='work1' class="work-logo uni-logo-wrap"><img src="img/logos/federico_logo.png" width="30px"> Federico II Naples</label>
-                        <span class='date'>September 2002 to March 2007  | Naples </span>
+                        <span class='date'><i class="fa fa-calendar"></i> 2002 to 2007 Naples </span>
                         <img class="circle" src="img/naples.png">
                     </div>
                     <div class='content-no-flag'>
@@ -792,6 +798,10 @@
         $demo.blockrain('theme', themes[currentIx]);
         $('#example-slider .theme strong').text('"' + themes[currentIx] + '"');
     }
+
+    $( document ).ready(function() {
+        $('body').addClass('animated tada');
+    });
     </script>
     <script>
     (function(i, s, o, g, r, a, m) {
