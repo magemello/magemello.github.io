@@ -40,10 +40,10 @@ function hashChange(){
 
 	if(location.hash == "#open"){
 		$("#intro").removeClass("col-md-12");
-		$("#intro").addClass("col-md-4");
+		$("#intro").addClass("col-md-3");
 	}
 	else if(location.hash == "#close") {
-		$("#intro").removeClass("col-md-4");
+		$("#intro").removeClass("col-md-3");
 		$("#intro").addClass("col-md-12");
 	}
 }
