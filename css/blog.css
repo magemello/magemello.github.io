@@ -256,7 +256,7 @@ blockquote {
 
 .post .title {
     color: #222;
-    font-size: 1.8em;
+    font-size: 40px;
     margin: 0 0 0.2em;
 }
 
@@ -278,7 +278,7 @@ blockquote {
 
 .post .description {
     color: #344151;
-    font-size: 1.15em;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.5em;
@@ -604,9 +604,14 @@ a:hover{
 .article .post .description {
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: justify;
 }
 
 pre.prettyprint {
     padding: 2px;
     border: 2px solid #B2B2B2;
+}
+
+.description h4{
+    font-weight: bold;
 }

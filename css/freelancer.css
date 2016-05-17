@@ -1147,7 +1147,7 @@ label {
     border-color:#ffffff;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
     .navbar-header {
         float: none;
     }
