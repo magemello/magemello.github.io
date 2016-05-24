@@ -642,3 +642,19 @@ pre.prettyprint {
 .border-table td{
     border: 1px solid;
 }
+
+.img-article-wrap{
+    background-color: #eeeeee;
+    border-radius: 12px;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.img-article-wrap img{
+    border-radius: 12px;
+    height: 250px;
+}
+
+.img-article-wrap-background{
+    border-radius: 12px;
+}
