@@ -100,20 +100,20 @@
             </header>
             <div class="description">
               <p>
-                  Typescript is an open source language developed by Microsoft. And is a superset of Javascript, but let's have a look its
+                  Typescript is an open source language developed by Microsoft and is a superset of Javascript, let's have a look at its
                   key features and how to install it and configure it to run our first typescript app.
-
-                  Key Features:
-                  Easy to learn for a java developer
-                  Module
-                  Strong type
-                  Annotations
-                  Class
-                  Interfaces
-                  Get translated in nice Javascript
-                  Ambient Declaration
-                  Arrow Expressions
-
+                    <br>Key Features:
+                <ol>
+                    <li>Easy to learn for a java developer</li>
+                    <li>Module</li>
+                    <li>Strong type</li>
+                    <li>Annotations</li>
+                    <li>Class</li>
+                    <li>Interfaces</li>
+                    <li>Get translated in nice Javascript</li>
+                    <li>Ambient Declaration</li>
+                    <li>Arrow Expressions</li>
+                </ol>
                   <br><br>
                 <h4>How to install it</h4>
 
@@ -124,7 +124,7 @@
                 </code>
               </pre>
 
-                If you don't know if you have npm and Node.Js installed, run the following commands in your terminal to check it:
+                If you don't know if you have npm and Node.Js installed or not, run the following commands in your terminal to check it:
                 <pre>
                 <code class="terminal">
     node -v in
@@ -136,13 +136,13 @@
 
                 <a href=https://nodejs.org/en/download/" alt="download nodejs">https://nodejs.org/en/download/</a>
 
-                <br>or in case you use brew (Mac users):
+                <br>If you use brew (Mac users):
                <pre>
                 <code class="terminal">
     brew install node
                 </code>
               </pre>
-                or in case you use apt-get (Ubuntu users):
+                If in case you use apt-get (Ubuntu users):
                <pre>
                 <code class="terminal">
     curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
@@ -154,7 +154,7 @@
                 <br><br>
                 <h4>Test the environment</h4>
 
-                To do it you can clone my  typescript sample project from GitHub <a
+                To do this you can clone my typescript sample project from github  <a
                     href="https://github.com/magemello/typescript-sample-project"
                                                          alt="typescript-sample-project">https://github.com/magemello/typescript-sample-project</a>
                 or copy and paste the following class in a .ts file
@@ -170,8 +170,7 @@ helloworld.ts
     document.body.innerHTML = sayHello(user);
                 </code>
 </pre>
-                then from the terminal run the typescript compiler, and if everything is setup in the correct way you should see a .js
-                file magically appear:
+                then from the terminal run the typescript compiler, and if everything is setup correctly you should see a .js file magically appear:
 
                   <pre>
                 <code class="terminal">
@@ -179,9 +178,8 @@ helloworld.ts
                 </code>
               </pre>
 
-               So if you are reading these lines means that in your folder there are 2 helloworld files, a .ts and .js. Great now the next
-                step is easy, to show it inside a browser our hello world we need a .html file and then will be enough include the .js
-                file as we have always done.
+                If you can see the above/below your folder contains 2 helloworld files, a .ts and .js. Great now the next step is easy, to show
+                it inside a browser our hello world we need a .html file and then there will be enough to include the .js file as we have always done.
 
                 <pre>
 index.html
@@ -226,11 +224,11 @@ tsconfig.json
 
               <br><br>
               <h4>Compiled language add 1 more level of complexity</h4>
-              Typescript is compiled in Javascript, and because of the compiler now there are two level of errors, the usual runtime
-              errors plus the compiler errors. Unfortunately even if typescript is a strong type and you have the compiler that warns you on
-              the errors, this doesn't stop you from doing silly thing and have at runtime the same errors that you would have with
-              Javascript. One example is the 3rd set of code below here where we define a variable with the any type and the we assign
-              it an integer and then we try to execute on it a string function.
+                Typescript is compiled in Javascript, because of the compiler there are two level of errors, the usual runtime errors plus
+                the compiler errors. Unfortunately even if typescript is strong type and you have the compiler that warr (don’t know what
+                you want to say here)you on the errors, this doesn't stop you doing silly things and have at runtime the same errors that
+                you would have with Javascript. One example is the 3rd set of code below where you define a variable with any type and
+                then we assign it an integer and then we try to execute on it a string function..
               <pre>
                 <code class="typescript">
       //Javascript (1)
@@ -311,7 +309,7 @@ tsconfig.json
 </pre>
 
                 <br>Const is block scope as well and is also immutable, so after the initialization you can not change the
-                value of the const elements, let's see what does ti means:
+                value of the const elements, let's see what it means:
               <pre>
                 <code class="javascript">
     const people = 123;
@@ -452,8 +450,8 @@ tsconfig.json
                 </table>
                 <br><br>
                 <h4>Interface</h4>
-                Defining an Interface we can define a common behaviour for our classes and be more explicit about the functionality they
-                provide. A key difference between Typescript and Java is that compatibility of interfaces is determined by the properties on
+                Defining an Interface we can define a common behaviour for our classes and be more explicit about the functionality they provide.
+                A key difference between Typescript and Java is that compatibility of interfaces is determined by the properties on
                 the interface, rather than by the inheritance chain like.
               <pre>
             <code class="javascript">
@@ -563,9 +561,9 @@ tsconfig.json
 
                 <br><br>
                 <h4>Modules - Import and Export</h4>
-                When you write code by default is in the global scope, so how we define scopes in typescript?
+                When you write code by default it is in the global scope, so how do we define scopes in typescript?
                 <br>We use the import and export keyword to do that. The export keyword creates a local scope that can be stored in a
-                separate file. But now you need to include this external file, and to do that you can use the import keyword.
+                separate file. But now you need to include this external file, to do that you can use the import keyword.
 
                 <br>
               <pre>
@@ -608,9 +606,9 @@ gto-sport.ts
 
                 <br><br>
                 <h4>Ambient Declarations </h4>
-                One of the first problems that you can have is how I use an old library written in javascript in typescript?<br>
+                One of the first problems that you may have is how I use an old library written in javascript in typescript?<br>
                 TypeScript allows you to use existing JavaScript libraries in TypeScript using Ambient declarations. Let's say for example
-                that in our index.html we are importing jQuery and we want to use it inside our .ts file, how to do it:
+                that in our index.html we are importing jQuery and we want to use it inside our .ts file, this is how to do it:
                 <br>
 
                               <pre>
