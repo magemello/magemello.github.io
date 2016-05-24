@@ -615,3 +615,30 @@ pre.prettyprint {
 .description h4{
     font-weight: bold;
 }
+
+.border-table{
+    background-color: #232323;
+    color: #ffffff;
+    border: 2px solid;
+    border-radius: 13px;
+}
+
+.border-table table{
+    border: 1px solid;
+}
+
+.border-table thead{
+    border: 1px solid;
+}
+
+.border-table th{
+    border: 1px solid;
+}
+
+.border-table tr{
+    border: 1px solid;
+}
+
+.border-table td{
+    border: 1px solid;
+}
