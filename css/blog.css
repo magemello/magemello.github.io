@@ -652,7 +652,8 @@ pre.prettyprint {
 }
 .img-article-wrap img{
     border-radius: 12px;
-    height: 250px;
+    max-height: 250px;
+    max-width: 100%;
 }
 
 .img-article-wrap-background{
