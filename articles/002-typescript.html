@@ -582,11 +582,17 @@ tsconfig.json
                 When you write code by default it is in the global scope, so how do we define scopes in typescript?
                 <br>We use the import and export keyword to do that. The export keyword creates a local scope that can be stored in a
                 separate file. But now you need to include this external file, to do that you can use the import keyword. To load this
-                module at runtime you have to use a module loader, you can choose between : (CommonJS) server side, (SystemJS) wrap
-                CommonJS modules for browsers, require.js (AMD) for
-                browsers ,
-                isomorphic (UMD), or ECMAScript 2015 native modules (ES6). Remember, if you want to use one of this module loader you
-                have to include it in your project.
+                module at runtime you have to use a module loader, you can choose between :
+
+                <ol>
+                    <li>CommonJS, server side</li>
+                    <li>SystemJS, wrap CommonJS for in browser use</li>
+                    <li>Require.js (AMD) for in browsers use</li>
+                    <li>Isomorphic (UMD)</li>
+                    <li>ECMAScript 2015 native modules (ES6)</li>
+                </ol>
+
+                Remember, if you want to use one of this module loader you have to include it in your project.
 
                 <br>
               <pre>
