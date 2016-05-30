@@ -209,14 +209,15 @@ index.html
                 <br><br>
               <h4>Configure the compiler</h4>
                 The compilers setting are defined in the tsconfig.json. The tsconfig.json file specifies the root files and the compiler
-                options required to compile the project
+                options required to compile the project. ModuleResolution has 2 different strategies: Classic or Node, by default is node.
+                I recommend to use node, classic is more for backward compatibility.
               <pre>
 tsconfig.json
                 <code class="json">
       {
         "compilerOptions": {
             "target": "es5",
-            "module": "system",
+            "module": "commonjs",
             "moduleResolution": "node",
             "emitDecoratorMetadata": true,
             "experimentalDecorators": true,
@@ -469,14 +470,14 @@ tsconfig.json
               <pre>
             <code class="javascript">
     //Interface
-    export interface Cars {
+    interface Cars {
         color: string;
 
         setColor(color: string): void;
     }
 
     //Implements the interface
-    export class Ferrari implements Cars {
+    class Ferrari implements Cars {
         color: string;
 
         setColor(color: string): void {
@@ -502,7 +503,7 @@ tsconfig.json
                               <pre>
             <code class="javascript">
     //The abstract class
-    export declare abstract class Ferrari {
+    abstract class Ferrari {
         color: string;
 
         setColor(color: string): void {
@@ -513,7 +514,7 @@ tsconfig.json
     }
 
     //Implements the abstract class
-    export class FerrariGto implements Ferrari {
+    class FerrariGto implements Ferrari {
         color: string;
 
         setColor(color: string): void {
@@ -539,36 +540,40 @@ tsconfig.json
                               <pre>
             <code class="javascript">
     //Original class
-    export class FerrariGto {
+    class FerrariGto {
+
+        car: string = 'Ferrari';
+
         color: string;
 
         setColor(color: string): void {
             this.color = color;
         }
 
-        printColor(): void{
+        getColor(): string {
+            return this.color;
+        }
+
+        printName(): void{
             console.log(this.color);
         }
     }
 
     //Extend class
-    export class FerrariGtoSport extends FerrariGto {
+    class FerrariGtoSport extends FerrariGto {
+
         color: string;
 
-        setColor(color: string): void {
-            this.color = color;
-        }
-
-        printColor(): void{
-            console.log(this.color + " sport");
+        printName(): void{
+            console.log(this.car + " " + this.getColor() + " sport");
         }
     }
 
     let gtoSport = new FerrariGtoSport();
     gtoSport.setColor('red');
 
-    //Output: red sport
-    gtoSport.printColor();
+    //Output: Ferrari red sport
+    gtoSport.printName();
             </code>
 </pre>
 
@@ -576,7 +581,12 @@ tsconfig.json
                 <h4>Modules - Import and Export</h4>
                 When you write code by default it is in the global scope, so how do we define scopes in typescript?
                 <br>We use the import and export keyword to do that. The export keyword creates a local scope that can be stored in a
-                separate file. But now you need to include this external file, to do that you can use the import keyword.
+                separate file. But now you need to include this external file, to do that you can use the import keyword. To load this
+                module at runtime you have to use a module loader, you can choose between : (CommonJS) server side, (SystemJS) wrap
+                CommonJS modules for browsers, require.js (AMD) for
+                browsers ,
+                isomorphic (UMD), or ECMAScript 2015 native modules (ES6). Remember, if you want to use one of this module loader you
+                have to include it in your project.
 
                 <br>
               <pre>
@@ -616,6 +626,8 @@ gto-sport.ts
             </code>
 </pre>
 
+                If you want to check an example where is utilized SystemJS, you can clone this Github project from the official typescript
+                repository: <a href="https://github.com/Microsoft/TypeScriptSamples/tree/master/systemjs">SystemJS and Typescript</a> .
 
                 <br><br>
                 <h4>Ambient Declarations </h4>
