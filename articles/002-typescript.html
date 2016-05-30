@@ -165,11 +165,7 @@
                 </code>
               </pre>
 
-
-                <br><br>
-                <h4>Test the environment</h4>
-
-                To do this you can clone my typescript sample project from github  <a
+                To test if the environment is fully working, clone the following typescript sample project from github  <a
                     href="https://github.com/magemello/typescript-sample-project"
                                                          alt="typescript-sample-project">https://github.com/magemello/typescript-sample-project</a>
                 or copy and paste the following class in a .ts file
@@ -210,7 +206,39 @@ index.html
                 </code>
               </pre>
                 <br><br>
-              <h4>Configure the compiler</h4>
+              <h4>Get translated in nice Javascript</h4>
+
+                Typescript is compiled in nice readable Javascript. Because of the compiler there are two level of errors, the usual
+                runtime errors plus the compiler errors.
+                Unfortunately even if typescript is strong type and you have the compiler that warn you about some problems, you are not
+                stopped from doing silly things and have at runtime the same errors that
+                you would have with Javascript. One example is the 3rd set of code below where you define a variable with any type and
+                then we assign it an integer and then we try to execute on it a string function..
+              <pre>
+                <code class="javascript">
+                    //Javascript (1)
+                    var testVar = 123;
+                    testVar.trim();
+
+                    //Uncaught TypeError: testVar.trim is not a function(…)
+
+                    //Typescript (2)
+                    let testVar : string = 123;
+                    testVar.trim();
+
+                    //Compiler error: Type 'number' is not assignable to type 'string'.
+
+                    //Typescript (3)
+                    let testVar : any = 123;
+                    testVar.trim();
+
+                    //Runtime error: ORIGINAL EXCEPTION: TypeError: testVar.trim is not a function
+                </code>
+</pre>
+
+
+                <br><br>
+
                 The compilers setting are defined in the tsconfig.json. The tsconfig.json file specifies the root files and the compiler
                 options required to compile the project. ModuleResolution has 2 different strategies: Classic or Node, by default is node.
                 I recommend to use node, classic is more for backward compatibility.
@@ -240,36 +268,7 @@ tsconfig.json
               </pre>
 
               <br><br>
-              <h4>Compiled language add 1 more level of complexity</h4>
-                Typescript is compiled in Javascript, because of the compiler there are two level of errors, the usual runtime errors plus
-                the compiler errors. Unfortunately even if typescript is strong type and you have the compiler that warr (don’t know what
-                you want to say here)you on the errors, this doesn't stop you doing silly things and have at runtime the same errors that
-                you would have with Javascript. One example is the 3rd set of code below where you define a variable with any type and
-                then we assign it an integer and then we try to execute on it a string function..
-              <pre>
-                <code class="javascript">
-      //Javascript (1)
-      var testVar = 123;
-      testVar.trim();
 
-      //Uncaught TypeError: testVar.trim is not a function(…)
-
-      //Typescript (2)
-      let testVar : string = 123;
-      testVar.trim();
-
-      //Compiler error: Type 'number' is not assignable to type 'string'.
-
-      //Typescript (3)
-      let testVar : any = 123;
-      testVar.trim();
-
-      //Runtime error: ORIGINAL EXCEPTION: TypeError: testVar.trim is not a function
-                </code>
-</pre>
-
-
-                <br><br>
                 <h4>Syntax and Type similar to Java</h4>
                 Typescript is easy to learn for a java developer, also because there are some resemblances between their types.
 
