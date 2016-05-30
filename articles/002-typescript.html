@@ -122,7 +122,7 @@
                     <li>Get translated in nice Javascript</li>
                     <li>Strong type</li>
                     <li>Syntax and Type similar to Java, so easy to learn for a java developer</li>
-                    <li>Introduce function scope variable and Immutable variable</li>
+                    <li>Let and const, function scope variable and Immutable variable</li>
                     <li>Arrow Expressions</li>
                     <li>For of / For in</li>
                     <li>Class and Interfaces</li>
@@ -267,9 +267,9 @@ tsconfig.json
                 </code>
               </pre>
 
-              <br><br>
+              <br>
 
-                <h4>Syntax and Type similar to Java</h4>
+                <h4>Syntax and Type similar to Java, so easy to learn for a java developer</h4>
                 Typescript is easy to learn for a java developer, also because there are some resemblances between their types.
 
               <pre>
@@ -295,7 +295,7 @@ tsconfig.json
 </pre>
 
                 <br><br>
-                <h4>Var is not recommended, use let and const</h4>
+                <h4>Let and const, function scope variable and Immutable variable</h4>
                 Typescript recommended to you to declare variables using var. To declare a variable you can use let or const.
                 <br>Now let's see what is the difference between let that is block scope and var that is function scoped:
               <pre>
@@ -408,7 +408,7 @@ tsconfig.json
 </pre>
 
                 <br><br>
-                <h4>Classes</h4>
+                <h4>Class and Interfaces</h4>
                 EC6 an Typescript have introduced classes. Classes are important to structure the code in elegant object oriented way.
                 <br>
               <pre>
@@ -427,45 +427,7 @@ tsconfig.json
             </code>
 </pre>
 
-                <br><br>
-                <h4>Access Modifiers</h4>
-                With classes of course came also access modifiers. Be aware that the access modifiers are not translated to javascript,
-                but you can still get benefit out of it at compile time.
-
                 <br>
-
-                <table class="border-table" style="width: 800px;">
-                    <thead>
-                    <tr>
-                        <th>Modifier</th>
-                        <th><code>public</code></th>
-                        <th><code>private</code></th>
-                        <th><code>protected</code></th>
-                    </tr>
-                    </thead>
-                    <tbody >
-                    <tr>
-                        <td>class instances</td>
-                        <td>yes</td>
-                        <td>no</td>
-                        <td>no</td>
-                    </tr>
-                    <tr>
-                        <td>class</td>
-                        <td>yes</td>
-                        <td>yes</td>
-                        <td>yes</td>
-                    </tr>
-                    <tr>
-                        <td>class children</td>
-                        <td>yes</td>
-                        <td>no</td>
-                        <td>yes</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <br><br>
-                <h4>Interface</h4>
                 Defining an Interface we can define a common behaviour for our classes and be more explicit about the functionality they provide.
                 A key difference between Typescript and Java is that compatibility of interfaces is determined by the properties on
                 the interface, rather than by the inheritance chain like.
@@ -579,8 +541,48 @@ tsconfig.json
             </code>
 </pre>
 
+
                 <br><br>
-                <h4>Modules - Import and Export</h4>
+
+                <h4>Access Modifiers</h4>
+                With classes of course came also access modifiers. Be aware that the access modifiers are not translated to javascript,
+                but you can still get benefit out of it at compile time.
+
+                <br>
+
+                <table class="border-table" style="width: 800px;">
+                    <thead>
+                    <tr>
+                        <th>Modifier</th>
+                        <th><code>public</code></th>
+                        <th><code>private</code></th>
+                        <th><code>protected</code></th>
+                    </tr>
+                    </thead>
+                    <tbody >
+                    <tr>
+                        <td>class instances</td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <td>class</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                    <tr>
+                        <td>class children</td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>yes</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br><br>
+
+                <h4>Module - Import and Export</h4>
                 When you write code by default it is in the global scope, so how do we define scopes in typescript?
                 <br>We use the import and export keyword to do that. The export keyword creates a local scope that can be stored in a
                 separate file. But now you need to include this external file, to do that you can use the import keyword. To load this
