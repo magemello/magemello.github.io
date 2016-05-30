@@ -216,23 +216,23 @@ index.html
                 then we assign it an integer and then we try to execute on it a string function..
               <pre>
                 <code class="javascript">
-                    //Javascript (1)
-                    var testVar = 123;
-                    testVar.trim();
+    //Javascript (1)
+    var testVar = 123;
+    testVar.trim();
 
-                    //Uncaught TypeError: testVar.trim is not a function(…)
+    //Uncaught TypeError: testVar.trim is not a function(…)
 
-                    //Typescript (2)
-                    let testVar : string = 123;
-                    testVar.trim();
+    //Typescript (2)
+    let testVar : string = 123;
+    testVar.trim();
 
-                    //Compiler error: Type 'number' is not assignable to type 'string'.
+    //Compiler error: Type 'number' is not assignable to type 'string'.
 
-                    //Typescript (3)
-                    let testVar : any = 123;
-                    testVar.trim();
+    //Typescript (3)
+    let testVar : any = 123;
+    testVar.trim();
 
-                    //Runtime error: ORIGINAL EXCEPTION: TypeError: testVar.trim is not a function
+    //Runtime error: ORIGINAL EXCEPTION: TypeError: testVar.trim is not a function
                 </code>
 </pre>
 
