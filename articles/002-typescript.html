@@ -118,15 +118,17 @@
                   key features and how to install it and configure it to run our first typescript app.<br>
                     <br><b>Key Features:</b>
                 <ol>
-                    <li>Easy to learn for a java developer</li>
-                    <li>Module</li>
-                    <li>Strong type</li>
-                    <li>Annotations</li>
-                    <li>Class</li>
-                    <li>Interfaces</li>
                     <li>Get translated in nice Javascript</li>
-                    <li>Ambient Declaration</li>
+                    <li>Strong type</li>
+                    <li>Syntax and Type similar to Java, so easy to learn for a java developer</li>
+                    <li>Introduce function scope variable and Immutable variable</li>
                     <li>Arrow Expressions</li>
+                    <li>For of / For in</li>
+                    <li>Class and Interfaces</li>
+                    <li>Access Modifiers</li>
+                    <li>Module</li>
+                    <li>Ambient Declaration</li>
+                    <li>Decorators / Annotations</li>
                 </ol>
                   <br><br>
                 <h4>How to install it</h4>
@@ -244,7 +246,7 @@ tsconfig.json
                 you would have with Javascript. One example is the 3rd set of code below where you define a variable with any type and
                 then we assign it an integer and then we try to execute on it a string function..
               <pre>
-                <code class="typescript">
+                <code class="javascript">
       //Javascript (1)
       var testVar = 123;
       testVar.trim();
@@ -670,6 +672,55 @@ helloworld.ts
     $('body').html(sayHello(user));
             </code>
 </pre>
+
+                <br><br>
+                <h4>Decorators / Annotations</h4>
+                Decorators use the form @expression, what a decorators does is add at runtime functionality to the annotated element.
+                Decorators can be applied on:
+                <ol>
+                    <li>Class</li>
+                    <li>Method</li>
+                    <li>Accessor</li>
+                    <li>Property</li>
+                    <li>Parameter</li>
+                    <li>Metadata</li>
+                </ol>
+
+                Some examples:
+              <pre>
+                <code class="java">
+                    @sealed
+                    class Greeter {
+
+                        private _x: number;
+
+                        greeting: string;
+
+                        @format("Hello, %s")
+                        greeting: string;
+
+                        constructor(message: string) {
+                            this.greeting = message;
+                        }
+
+                        @enumerable(false)
+                        greet() {
+                            return "Hello, " + this.greeting;
+                        }
+
+                        @validate
+                        greetHello(@required name: string) {
+                            return "Hello " + name + ", " + this.greeting;
+                        }
+
+                        @configurable(false)
+                        get x() {
+                            return this._x;
+                        }
+                    }
+                </code>
+</pre>
+
 
                 <br><br>
                 <h4>Typings </h4>
