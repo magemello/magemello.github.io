@@ -115,7 +115,7 @@
             <div class="description">
               <p>
                   Typescript is an open source language developed by Microsoft and is a superset of Javascript, let's have a look at its
-                  key features and how to install it and configure it to run our first typescript app.<br>
+                  key features and how to install it and configure it, in order to run our first typescript app.<br>
                     <br><b>Key Features:</b>
                 <ol>
                     <li>Easy to configure</li>
@@ -156,7 +156,7 @@
     brew install node
                 </code>
               </pre>
-                If in case you use apt-get (Ubuntu users):
+                If you use apt-get (Ubuntu users):
                <pre>
                 <code class="terminal">
     curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
@@ -180,7 +180,7 @@ helloworld.ts
     document.body.innerHTML = sayHello(user);
                 </code>
 </pre>
-                then from the terminal run the typescript compiler, and if everything is setup correctly you should see a .js file magically appear:
+                then from the terminal run the typescript compiler, and if everything is setup correctly you should see a .js file appear:
 
                   <pre>
                 <code class="terminal">
@@ -207,12 +207,19 @@ index.html
                 <br>
               <h4>Get translated in nice Javascript</h4>
 
-                Typescript is compiled in nice readable Javascript. Because of the compiler there are two level of errors, the usual
-                runtime errors plus the compiler errors.
+                Typescript is compiled in nice readable Javascript. Because of the compiler there are two level of errors:
+                <ol>
+                    <li>Runtime errors</li>
+                    <li>Compiler errors</li>
+                </ol>
                 Unfortunately even if typescript is strong type and you have the compiler that warn you about some problems, you are not
                 stopped from doing silly things and have at runtime the same errors that
-                you would have with Javascript. One example is the 3rd set of code below where you define a variable with any type and
-                then we assign it an integer and then we try to execute on it a string function..
+                you would have with Javascript. One example is the 3 set of code below where:
+                <ol>
+                    <li>1) Define a variable with any type</li>
+                    <li>2) Assign to it an integer</li>
+                    <li>3) Try to execute on it like a string function</li>
+                </ol>
               <pre>
                 <code class="javascript">
     //Javascript (1)
@@ -239,8 +246,8 @@ index.html
                 <br>
 
                 The compilers setting are defined in the tsconfig.json. The tsconfig.json file specifies the root files and the compiler
-                options required to compile the project. ModuleResolution has 2 different strategies: Classic or Node, by default is node.
-                I recommend to use node, classic is more for backward compatibility.
+                options required to compile the project. The option ModuleResolution has 2 different strategies: Classic or Node, by default
+                is node. I recommend to use node, classic its there just for backward compatibility.
               <pre>
 tsconfig.json
                 <code class="json">
@@ -371,25 +378,56 @@ tsconfig.json
                 </code>
               </pre>
 
-                Functions with => operator keep the outside context, so you don't have to do anymore hack like self = this to keep the
+                Functions with => operator keep the outside context, so you don't have to do anymore hack like "self = this" to keep the
                 context.
                 <pre>
                 <code class="javascript">
-    let numberofPeople: number = 100;
-    let increment = () => {
-        numberofPeople++;
+
+    //Javascript
+    function People() {
+        this.people = 100;
+        var self = this;
+        this.addOne = function() {
+            self.people++;
+        }
     }
-    increment();
+
+    var community = new People();
+    setTimeout(community.addOne, 1000);
+
+    //Output: 100
+    setTimeout(function() {
+        console.log(community.people);
+    }, 2000);
+
+
+
+    //Typescript
+    class People {
+
+        people:number =  100;
+
+        addOne = () => {
+            this.people++;
+        }
+    }
+
+    var community = new People();
+    setTimeout(community.addOne, 1000);
 
     //Output: 101
-    console.log(numberofPeople);
+    setTimeout(function() {
+        console.log(community.people);
+    }, 2000);
                 </code>
               </pre>
 
                 <br>
                 <h4>For of vs For in</h4>
-                A nice add of EC6 and Typescript is "for of" that cycle over the value of an array instead of the old "for in" that cycle
-                over the key and then you have to use the key to get the value...silly thing of the past. In practice:
+                A nice add of EC6 that you can use also in Typescript is the "for of" that iterates over the value of an array instead of the
+                old
+                "for in" that iterates
+                over the key:
 
               <pre>
             <code class="javascript">
