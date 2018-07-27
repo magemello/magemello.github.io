@@ -1,6 +1,6 @@
 .cat{
-        margin-top: -900px;
-}
+/*        margin-top: -900px;
+*/}
 
 .portfolio-header{
     position: absolute;
@@ -256,4 +256,17 @@
 
 .donation-div-top{
     top: 0.2em;
+}
+
+.caption{
+     display: none;
+}
+.portfolio-item-noimage {
+    text-align: center;
+    height: 130px;
+    font-size: 19px;
+    color: #ffffff;
+}
+.portfolio-link-noimage{
+        color: #ffffff;
 }
